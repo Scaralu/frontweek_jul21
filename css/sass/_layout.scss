@@ -1,0 +1,139 @@
+.menu {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 48px 16px;
+}
+
+.relative {
+    position: relative;
+}
+
+.container {
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 24px 16px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero {
+    height: 90vh
+}
+
+@media screen and (max-width: 960px){
+    .hero {
+        height: auto;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+}
+
+.container-item:nth-child(1){
+    flex-grow: 3;
+    margin: 40px 0;
+}
+
+.container-item:nth-child(2){
+    flex-grow: 1;
+    margin: 40px 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+        max-width: 400px;
+    }
+}
+
+.bg-hero {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: -1;
+}
+
+.svg-hero {
+
+}
+
+@media screen and (max-width: 1200px) {
+    .svg-hero {
+        transform: scale(1.5) rotate(25deg);
+    }
+}
+
+
+@media screen and (max-width: 960px) {
+    .svg-hero {
+        transform: scale(2) rotate(25deg);
+    }
+}
+
+.flex-end {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.list-item {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px 24px;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    position: relative;
+
+    a {
+        padding: 40px;
+        &:hover {
+            &+.img-project {
+                transform: translate(-50%, -50%) translate3d(0, 0, 0);
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.img-project {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%) translate3d(-1000px, 0, 0);
+    transition: 0.7s ease;
+
+    opacity: 0;
+
+    max-width: 720px;
+    border-radius: 4px;
+}
+
+.bb-gray {
+    width: 100%;
+    border-bottom: 1px solid $black-light;
+}
+
+.get {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px 24px;
+}
